@@ -1,0 +1,42 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Staff Form</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<main>
+    <h1>New Staff Member Form</h1>
+    <form action="/addNewStaff">
+        <p>
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName">
+        </p>
+
+        <p>
+            <label for="surName">Surname</label>
+            <input type="text" name="surName" id="surName">
+        </p>
+
+        <p>
+            <label for="startDate">Employed since (dd/mm/yyyy)</label>
+            <input type="date" name="startDate" id="startDate">
+        </p>
+
+        <p>
+            <input type="checkbox" id="student" name="student" value="student">
+            <label for="student">working student?</label>
+        </p>
+
+        <p>
+            <input id="submit" type="submit" name="addStaff" value="Confirm staff member">
+        </p>
+    </form>
+    <p id="home"><a href="/">Back to home page</a></p>
+</main>
+</body>
+</html>

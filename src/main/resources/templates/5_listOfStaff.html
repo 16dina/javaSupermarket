@@ -1,0 +1,21 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>List of Staff Members</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<main>
+    <h1>Our staff:</h1>
+    <ul>
+        <li th:each="staff : ${aLlStaffList}"
+            th:text="${staff.toString()}"></li>
+    </ul>
+    <p id="home"><a href="/">Back to homepage</a></p>
+</main>
+</body>
+</html>

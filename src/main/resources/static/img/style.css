@@ -1,0 +1,104 @@
+/*add a self-selected stylesheet here*/
+
+body {
+    background-color: #722620;
+    font-family: Arial, serif;
+}
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f2bc94;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #30110d;
+    font-weight: bold;
+}
+
+p, label, li {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    color: #30110d;
+}
+
+li {
+    text-align: left;
+}
+
+#customersList li {
+    line-height: 0.4rem;
+}
+
+a {
+    text-decoration: none;
+    background-color: #722620;
+    color: #f2bc94;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+a:hover {
+    border: 2px solid #722620;
+    background-color: #f2bc94;
+    color: #722620;
+}
+
+label {
+    color: #722620;
+    font-weight: bold;
+}
+
+#customerForm p {
+    margin: 0;
+}
+
+#home {
+    margin-top: 10px;
+    text-align: left;
+}
+
+#submit {
+    padding: 8px;
+    color: #f2bc94;
+    background-color: #30110d;
+}
+#submit:hover {
+    color: #30110d;
+    background-color: #f2bc94;
+    border: 2px solid #30110d;
+    cursor: pointer;
+}
+
+#supermarkets li {
+    font-weight: bold;
+}
+
+#supermarkets a {
+    text-decoration: underline;
+    background-color: transparent;
+    color: #722620;
+    border-radius: 0;
+    padding: 0;
+}
+
+#supermarkets a:hover {
+    border-width: 0;
+    background-color: transparent;
+    color: red;
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 25px;
+    border: 3px solid #30110d;
+    max-width: 250px;
+
+}

@@ -1,0 +1,46 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Customer Form</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<main id="customerForm">
+    <h1>New Customer Form</h1>
+    <form action="/addNewCustomer">
+        <p>
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName">
+        </p>
+
+        <p>
+            <label for="surName">Surname</label>
+            <input type="text" name="surName" id="surName">
+        </p>
+
+        <p>
+            <label for="yearOfBirth">Year of birth</label>
+            <input type="text" name="yearOfBirth" id="yearOfBirth">
+        </p>
+
+        <p th:each="supermarket : ${allSupermarketsList}">
+            <input type="radio" name="supermarketIndex"
+                   th:value="${supermarketStat.index}"
+                   th:id="${supermarketStat.index}"
+                   th:checked="${supermarketStat.index} == 0"/>
+            <label th:for="${supermarketStat.index}"
+                   th:text="${supermarket.getName()}"></label>
+        </p>
+
+        <p>
+            <input id="submit" type="submit" name="addCustomer" value="Continue and generate cardnumber">
+        </p>
+    </form>
+    <p id="home"><a href="/">Back to home page</a></p>
+</main>
+</body>
+</html>

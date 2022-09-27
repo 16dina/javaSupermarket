@@ -1,0 +1,57 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>New Department Form</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<main>
+    <h1>New Department Form</h1>
+    <form action="/addNewDepartment">
+        <p>
+            <label for="name">Name department</label>
+            <input type="text" name="name" id="name">
+        </p>
+
+        <p>
+            <label for="photo">Photo</label>
+            <input type="text" name="photo" id="photo">
+        </p>
+
+        <p>
+            <label for="refrigerated">Refrigerated</label>
+            <input type="checkbox" id="refrigerated" name="refrigerated" value="refrigerated">
+        </p>
+
+        <p>
+            <select name="supermarketIndex">
+                <option value="-1">In which supermarket?</option>
+                <option th:each="supermarket : ${allSupermarketsList}"
+                        th:text="${supermarket.getName()}"
+                        th:value="${supermarketStat.index}">
+                </option>
+            </select>
+        </p>
+
+        <p>
+            <select name="staffIndex">
+                <option value="-1">Who is responsible for this department?</option>
+                <option th:each="staff : ${allStaffList}"
+                        th:text="${staff.getFirstName()} + ' ' + ${staff.getSurName()}"
+                        th:value="${staffStat.index}">
+                </option>
+            </select>
+        </p>
+
+        <p>
+            <input id="submit" type="submit" name="addDepartment" value="Confirm department">
+        </p>
+    </form>
+    <p id="home"><a href="/">Back to home page</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title th:text="'Departments of ' + ${assignedSupermarket.getName()}"></title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+    <main>
+        <h1 th:text="'Departments of ' + ${assignedSupermarket.getName()}"></h1>
+        <ol>
+            <li th:each="department : ${assignedSupermarket.getDepartmentList()}">
+                <span th:text="${department.getName()} + ' - '"></span>
+                <span th:if="${department.isRefrigerated()}">Refrigerated department</span>
+                <span th:if="${!department.isRefrigerated()}">No refrigeration</span>
+                <p th:text="'- responsible: ' + ${department.getResponsible().getFirstName()} + ' ' + ${department.getResponsible().getSurName()}"></p>
+                <img onerror="this.src='img/noimage.jpg'" th:src="@{${department.getPhoto()}}"/>
+            </li>
+        </ol>
+        <p id="home"><a href="/">Back to home page</a></p>
+    </main>
+</body>
+</html>

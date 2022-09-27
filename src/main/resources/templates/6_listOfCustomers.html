@@ -1,0 +1,32 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>List of Customers</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+    <main id="customersList">
+        <h1>Our customers:</h1>
+        <ol>
+            <li th:each="customer : ${allCustomersList}">
+                <span th:text="${customer.getFirstName()} + ' ' + ${customer.getSurName()}"></span>
+                <ul>
+                    <li th:text="'Year of Birth: ' + ${customer.getYearOfBirth()}"></li>
+                    <li th:text="'Cardnumber: ' + ${customer.getCardNumber()}"></li>
+                    <li>
+                        <span th:text="'Shopping List:'"></span>
+                        <ul>
+                            <li th:each="item : ${customer.getShoppingList()}" th:text="${item}"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p id="home"><a href="/">Back to homepage</a></p>
+    </main>
+</body>
+</html>

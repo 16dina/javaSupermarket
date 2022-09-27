@@ -1,0 +1,32 @@
+<!--Dina Boshnaq-->
+<!--r0823887-->
+<!--1ITF 1ACS-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Supermarket project</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+</head>
+<body>
+<main>
+    <h1>Supermarket</h1>
+    <p><a href="/formCustomer">New customer</a></p>
+    <p><a href="/formStaff">New staff member</a></p>
+    <p><a href="/staffList">List of all saved staff members</a></p>
+    <p><a href="/customerList">List of all saved customers</a></p>
+    <p><a href="/formSupermarket">New supermarket</a></p>
+    <p><a href="/supermarketList">List of supermarkets</a></p>
+    <p><a href="/formDepartment">New department</a></p>
+    <form action="/searchForDepartment">
+        <div>
+            <label for="name">Search for a department by name:</label>
+            <input type="text" name="name" id="name">
+            <span>
+                <input id="submit" type="submit" name="searchForDepartment" value="Search">
+            </span>
+        </div>
+    </form>
+</main>
+</body>
+</html>
